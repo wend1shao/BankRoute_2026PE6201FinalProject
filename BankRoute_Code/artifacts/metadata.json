@@ -1,0 +1,35 @@
+{
+  "trained_at_utc": "2026-10-03T06:52:54.975200+00:00",
+  "random_seed": 42,
+  "official_train_rows": 10003,
+  "official_test_rows_expected": 3080,
+  "all_categories": 77,
+  "in_scope_labels": [
+    "card_payment_not_recognised",
+    "cash_withdrawal_not_recognised",
+    "pending_card_payment",
+    "pending_cash_withdrawal",
+    "declined_card_payment",
+    "declined_cash_withdrawal",
+    "card_payment_wrong_exchange_rate",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "card_payment_fee_charged",
+    "cash_withdrawal_charge"
+  ],
+  "in_scope_train_rows": 1650,
+  "out_of_scope_labels": 67,
+  "validation_rows": 2001,
+  "threshold_selection": {
+    "scope_threshold": 0.45,
+    "intent_confidence_threshold": 0.35,
+    "intent_margin_threshold": 0.14,
+    "validation_oos_safe_escalation": 0.976619,
+    "validation_in_scope_coverage": 0.873874,
+    "validation_selective_accuracy": 0.958763,
+    "validation_macro_f1_with_abstention": 0.892557,
+    "selection_score": 0.934203,
+    "llm_agreement_threshold": 0.75
+  },
+  "model_family": "TF-IDF word+character features with logistic regression",
+  "sklearn_version": "1.5.2"
+}
