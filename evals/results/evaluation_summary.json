@@ -1,0 +1,47 @@
+{
+  "dataset": {
+    "official_test_rows": 3080,
+    "in_scope_rows": 400,
+    "out_of_scope_rows": 2680,
+    "in_scope_labels": [
+      "card_payment_not_recognised",
+      "cash_withdrawal_not_recognised",
+      "pending_card_payment",
+      "pending_cash_withdrawal",
+      "declined_card_payment",
+      "declined_cash_withdrawal",
+      "card_payment_wrong_exchange_rate",
+      "wrong_exchange_rate_for_cash_withdrawal",
+      "card_payment_fee_charged",
+      "cash_withdrawal_charge"
+    ],
+    "out_of_scope_label_count": 67
+  },
+  "non_ai_keyword_baseline": {
+    "macro_f1": 0.496003,
+    "coverage": 0.46
+  },
+  "tfidf_logistic_closed_set": {
+    "accuracy": 0.94,
+    "macro_f1": 0.939749,
+    "mean_latency_ms_per_query_batch": 0.0779
+  },
+  "guarded_router": {
+    "macro_f1_with_abstention": 0.921062,
+    "in_scope_coverage": 0.8875,
+    "selective_accuracy": 0.980282,
+    "out_of_scope_safe_escalation": 0.974254,
+    "out_of_scope_false_route_rate": 0.025746,
+    "thresholds": {
+      "scope_threshold": 0.45,
+      "intent_confidence_threshold": 0.35,
+      "intent_margin_threshold": 0.14,
+      "llm_agreement_threshold": 0.75,
+      "validation_oos_safe_escalation": 0.976619,
+      "validation_in_scope_coverage": 0.873874,
+      "validation_selective_accuracy": 0.958763,
+      "validation_macro_f1_with_abstention": 0.892557,
+      "selection_score": 0.934203
+    }
+  }
+}

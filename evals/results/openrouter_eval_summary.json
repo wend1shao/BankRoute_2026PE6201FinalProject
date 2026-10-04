@@ -1,0 +1,15 @@
+{
+  "evaluation": "OpenRouter foundation-model comparison on frozen official-test sample",
+  "model": "openai/gpt-4o-mini",
+  "sample_rows": 50,
+  "sampling": "5 official test examples per each of 10 in-scope labels; random_state=6201",
+  "accuracy": 0.78,
+  "macro_f1": 0.849841,
+  "schema_and_allowed_label_success": 0.8,
+  "mean_latency_ms": 1776.71,
+  "total_input_tokens": 34969,
+  "total_output_tokens": 1860,
+  "estimated_total_cost_usd": 0.006361,
+  "errors": 0,
+  "secret_handling": "API key read from environment only; never persisted or returned."
+}
